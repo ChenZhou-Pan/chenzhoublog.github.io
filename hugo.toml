@@ -1,0 +1,41 @@
+# Hugo 配置文件 - GitHub Pages 博客
+# 部署后请将 baseURL 改为你的实际地址：
+# - 项目站: https://<你的用户名>.github.io/<仓库名>/
+# - 用户站: https://<你的用户名>.github.io/
+
+baseURL = "https://chenzhou-pan.github.io/"
+
+title = "Chenzhou Blog"
+theme = ""
+
+# 语言
+languageCode = "zh-CN"
+defaultContentLanguage = "zh-cn"
+
+# 菜单
+[menu]
+  [[menu.main]]
+    name = "首页"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "文章"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "关于"
+    url = "/about/"
+    weight = 3
+
+# 分页
+[pagination]
+  pagerSize = 10
+
+# 摘要字数
+[params]
+  description = "我的个人博客"
+
+# GitHub Actions 构建时需要：将图片缓存到 cacheDir
+[caches]
+  [caches.images]
+    dir = ":cacheDir/images"

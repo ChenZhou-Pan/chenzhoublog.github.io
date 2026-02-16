@@ -1,0 +1,16 @@
+# Hugo
+/public/
+/resources/_gen/
+/assets/jsconfig.json
+*.log
+hugo_stats.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
