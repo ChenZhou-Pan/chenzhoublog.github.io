@@ -6,7 +6,7 @@
 baseURL = "https://chenzhou-pan.github.io/"
 
 title = "Chenzhou Blog"
-theme = ""
+theme = "blogtheme"
 
 # 语言
 languageCode = "zh-CN"
