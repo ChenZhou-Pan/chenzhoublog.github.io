@@ -50,7 +50,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/" \
+            --baseURL "https://chenzhou-pan.github.io/" \
             --cacheDir "${{ runner.temp }}/hugo_cache"
 
       - name: Upload artifact
