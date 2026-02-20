@@ -8,24 +8,82 @@ baseURL = "https://chenzhou-pan.github.io/"
 title = "Chenzhou Blog"
 theme = "blogtheme"
 
-# 语言
 languageCode = "zh-CN"
 defaultContentLanguage = "zh-cn"
 
+# 输出格式配置：为主页生成 HTML / RSS / JSON / Web App Manifest
+[outputs]
+  home = ["HTML", "RSS", "JSON", "WebAppManifest"]
+
+[outputFormats]
+  [outputFormats.WebAppManifest]
+    name = "WebAppManifest"
+    mediaType = "application/manifest+json"
+    baseName = "site"
+    rel = "manifest"
+    isPlainText = true
+    notAlternative = true
+
+[languages]
+  [languages.en]
+    languageCode = "en-US"
+    languageName = "English"
+    weight = 1
+
+  [languages."zh-cn"]
+    languageCode = "zh-CN"
+    languageName = "简体中文"
+    weight = 2
+
 # 菜单
 [menu]
+  # 顶部导航栏功能入口：Posts / Categories / Tags / Archives
   [[menu.main]]
-    name = "首页"
-    url = "/"
-    weight = 1
-  [[menu.main]]
-    name = "文章"
+    identifier = "nav.posts"
+    name = "Posts"
     url = "/posts/"
-    weight = 2
+    weight = 10
+    [menu.main.params]
+      icon = "posts"
+
   [[menu.main]]
-    name = "关于"
-    url = "/about/"
-    weight = 3
+    identifier = "nav.categories"
+    name = "Categories"
+    url = "/categories/"
+    weight = 11
+    [menu.main.params]
+      icon = "categories"
+
+  [[menu.main]]
+    identifier = "nav.tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 12
+    [menu.main.params]
+      icon = "tags"
+
+  [[menu.main]]
+    identifier = "nav.archives"
+    name = "Archives"
+    url = "/archives/"
+    weight = 13
+    [menu.main.params]
+      icon = "archive"
+
+# 底部右侧社交图标（GitHub、邮箱等）
+[[menu.social]]
+  name = "GitHub"
+  url = "https://github.com/ChenZhou-Pan"
+  weight = 1
+  [menu.social.params]
+    icon = "github"
+
+[[menu.social]]
+  name = "Email"
+  url = "mailto:2576285515@qq.com"
+  weight = 2
+  [menu.social.params]
+    icon = "email"
 
 # 分页
 [pagination]
@@ -34,6 +92,53 @@ defaultContentLanguage = "zh-cn"
 # 摘要字数
 [params]
   description = "我的个人博客"
+  # 默认颜色方案（与下面 themes 的 key 一致）
+  colorScheme = "default"
+  # 主题风格列表（中间按钮下拉选项，key 对应 CSS data-theme）
+  [params.themes]
+    [params.themes.default]
+      name = "Default"
+      order = 0
+    [params.themes.claude]
+      name = "Claude"
+      order = 1
+    [params.themes.bumblebee]
+      name = "Bumblebee"
+      order = 2
+    [params.themes.emerald]
+      name = "Emerald"
+      order = 3
+    [params.themes.nord]
+      name = "Nord"
+      order = 4
+    [params.themes.sunset]
+      name = "Sunset"
+      order = 5
+    [params.themes.abyss]
+      name = "Abyss"
+      order = 6
+    [params.themes.dracula]
+      name = "Dracula"
+      order = 7
+    [params.themes.amethyst]
+      name = "Amethyst"
+      order = 8
+    [params.themes.slate]
+      name = "Slate"
+      order = 9
+    [params.themes.twitter]
+      name = "Twitter"
+      order = 10
+  # 头部导航栏 Logo / 头像设置
+  [params.header]
+    sticky = true
+    showThemeSwitch = true
+    showDarkModeSwitch = true
+    showLanguageSwitch = true
+    languageSwitchMode = "dropdown"
+    [params.header.logo]
+      image = "/images/avatar.jpg" # 相对于 static 目录的路径
+      link = "/"
 
 # GitHub Actions 构建时需要：将图片缓存到 cacheDir
 [caches]

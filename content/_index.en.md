@@ -1,10 +1,10 @@
 ---
-title: "首页"
+title: "Home"
 
 author:
   name: "ChenZhou"
-  title: "一句简单的个人介绍"
-  description: "暂无。"
+  title: "A short personal introduction"
+  description: "no."
   avatar: "/images/avatar.jpg"
   social:
     - name: "GitHub"
@@ -15,4 +15,5 @@ author:
       icon: "email"
 ---
 
-欢迎来到我的博客。
+Welcome to my blog.
+
