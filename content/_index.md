@@ -3,8 +3,8 @@ title: "首页"
 
 author:
   name: "ChenZhou"
-  title: "一句简单的个人介绍"
-  description: "暂无。"
+  title: "平安喜乐"
+  description: ""
   avatar: "/images/avatar.jpg"
   social:
     - name: "GitHub"

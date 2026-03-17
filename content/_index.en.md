@@ -3,8 +3,8 @@ title: "Home"
 
 author:
   name: "ChenZhou"
-  title: "A short personal introduction"
-  description: "no."
+  title: "Peace and joy"
+  description: ""
   avatar: "/images/avatar.jpg"
   social:
     - name: "GitHub"

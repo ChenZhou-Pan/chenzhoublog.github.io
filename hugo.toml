@@ -10,6 +10,8 @@ theme = "blogtheme"
 
 languageCode = "zh-CN"
 defaultContentLanguage = "zh-cn"
+# 参与归档 / 最近文章统计的主内容 Section
+mainSections = ["posts"]
 
 # 输出格式配置：为主页生成 HTML / RSS / JSON / Web App Manifest
 [outputs]
@@ -34,6 +36,11 @@ defaultContentLanguage = "zh-cn"
     languageCode = "zh-CN"
     languageName = "简体中文"
     weight = 2
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
 
 # 菜单
 [menu]
